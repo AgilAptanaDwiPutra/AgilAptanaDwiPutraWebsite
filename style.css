@@ -1,0 +1,572 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Pink Bar with Navigation Links */
+.pink-bar {
+    background-color: #ff69b4;
+    padding: 5px 0;
+    text-align: right;
+}
+
+.pink-bar .nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pink-bar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #0183ae, #00bcd4); /* Gradient biru */
+}
+
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.logo img {
+    height: 140px; /* Sesuaikan ukuran logo sesuai keinginan */
+    width: auto; /* Biarkan lebar otomatis sesuai rasio gambar */
+}
+
+.search-bar {
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 10px 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.search-bar input[type="text"] {
+    width: 350px;
+    padding: 8px 12px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+}
+
+
+.search-bar .search-button {
+    padding: 8px 17px;
+    background-color: #1a5c9e;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    color: white;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons .register {
+    padding: 8px 15px;
+    color: #00bfff;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-buttons .login {
+    padding: 8px 15px;
+    color: white;
+    background-color: #2a5298;
+    border: 2px solid #2a5298;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-buttons .register:hover {
+    background-color: #00bfff;
+    color: #fff;
+}
+
+.auth-buttons .login:hover {
+    background-color: #1a5c9e;
+}
+
+.auth-buttons button {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.auth-buttons button:hover {
+    background-color: #00bfff;
+    transform: scale(1.05);
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    background-color: #ffffff;
+}
+
+.banner img {
+    max-width: 120%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Event Cards */
+.event-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left; /* Change to left-align the text */
+    padding: 15px; /* Add padding for better spacing */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px; /* Add rounded corners to the image */
+    margin-bottom: 10px; /* Add space between the image and text */
+}
+
+/* Styling for Event Card Text Layout */
+.card h3 {
+    font-size: 20px; /* Ukuran font lebih kecil sesuai dengan contoh */
+    font-weight: bold; /* Tidak menggunakan bold */
+    color: #333;
+    line-height: 1.5; /* Menambah jarak antar-baris */
+    text-align: left;
+    margin-bottom: 5px; /* Sedikit jarak di bawah judul */
+}
+
+.card .event-date {
+    font-size: 14px;
+    color: #888; /* Warna lebih terang sesuai contoh */
+    margin-top: 5px; /* Jarak di atas tanggal */
+    font-weight: normal;
+}
+
+.card .event-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007BFF; /* Warna biru untuk harga */
+    margin-top: 5px;
+}
+
+.card .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #9b9b9b; /* Warna abu-abu muda untuk pemisah */
+    margin: 10px 0; /* Jarak atas dan bawah dari garis */
+}
+
+.card .event-location {
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase; /* Membuat teks menjadi huruf besar sesuai contoh */
+    margin-top: 5px;
+}
+
+
+/* Updated alignment and spacing for text elements */
+.card h3,
+.card .event-date,
+.card .event-price,
+.card .event-location {
+    padding-left: 10px; /* Align text with padding for uniformity */
+}
+
+/* Event Details with Decorative Borders and Background */
+.event-details {
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #ffffff, #e3f2fd);
+    border-left: 8px solid #ff69b4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.event-details.show {
+    display: block;
+    opacity: 1;
+}
+
+.event-details h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #ff69b4, #0183ae);
+    color: transparent;
+}
+
+.event-details p {
+    font-size: 16px;
+    color: #555;
+    margin: 8px 0;
+}
+
+.event-details p strong {
+    color: #007BFF;
+}
+
+.event-details .event-info {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.event-details .event-info img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.event-details .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 15px 0;
+}
+
+/* Ticket Booking with Styled Elements and Additional Details */
+.ticket-booking {
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    border-radius: 10px;
+    border: 2px solid #007BFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket-booking::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 123, 255, 0.15);
+    border-radius: 50%;
+}
+
+.ticket-booking h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.ticket-booking label {
+    font-size: 16px;
+    color: #555;
+    margin-right: 10px;
+}
+
+.ticket-booking input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #f9f9f9;
+}
+
+.ticket-booking button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.ticket-booking button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.ticket-booking .additional-info {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ticket-booking .additional-info img {
+    width: 20px;
+    height: 20px;
+}
+
+.ticket-booking .terms {
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* Custom Icons for Event Info */
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.icon-date {
+    background-image: url('assets/calendar.png');
+}
+
+.icon-location {
+    background-image: url('assets/map.png');
+}
+
+.icon-price {
+    background-image: url('assets/pricetag.png');
+}
+
+/* Footer */
+footer {
+    background-color: #0183ae; 
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    margin: 0 20px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styling Social Media Icons */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.footer-social a img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); /* Membuat ikon putih jika gambar asli hitam */
+    transition: transform 0.3s;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Bottom Links */
+.footer-bottom {
+    background-color: #3547a2; /* Warna biru lebih gelap */
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-top {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 90%;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-cards {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .header-top {
+        padding: 20px 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+        margin: 0;
+        border-radius: 20px;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-social a img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.payment-options {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.payment-options h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-option:hover {
+    background-color: #e3f2fd;
+    border-radius: 5px;
+}
+
+.payment-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.payment-methods input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.payment-methods input[type="radio"]:checked + .payment-icon {
+    transform: scale(1.2);
+}
+
+/* Optional: Adding animation for hover effect */
+.payment-option:hover .payment-icon {
+    transform: scale(1.1);
+}
+
+
+/* Import Google Font "Roboto" */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
